@@ -1,0 +1,27 @@
+*{
+    background-color: #1b1b1b;
+    color: white
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button, input{
+    background-color: transparent;
+    padding: 1vh;
+    border: 0.1vh solid white;
+    margin: 1vh
+}
+button:hover, input:hover{
+    background-color: white;
+    color: black;
+}
