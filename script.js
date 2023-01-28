@@ -9,6 +9,7 @@ class CRIPTO{
         this.keyInput = document.getElementById("keyInput");
         this.value = document.getElementById("entry").value;
 
+        this.keyHud.addEventListener("click",()=>this.copyKey(this));
         this.buttonEncrypt.addEventListener('click',()=>{
             this.key = [];
             this.encrypt(this);
@@ -29,10 +30,9 @@ class CRIPTO{
 
     }
     encrypt(){
-        if(this.value == "") this.value = document.getElementById("entry").value;
+        this.value = document.getElementById("entry").value;
         let value = this.matriz(this.value,false); 
         value = value.join("");
-        this.keyHud.addEventListener("click",()=>this.copyKey(this.key));
         let _keyHud = "KEY: "+this.key;
         this.keyHud.innerText = _keyHud;
         return this.key;
@@ -100,8 +100,8 @@ class CRIPTO{
     asciiGenerator(char){
         return char.charCodeAt(0);
     }
-    copyKey(key){
-        const password = key;      
+    copyKey(){
+        const password = this.key;      
         navigator.clipboard.writeText(password).then(()=>{
             alert("KEY copiada");
         });
