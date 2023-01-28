@@ -108,16 +108,4 @@ class CRIPTO{
     }
 }
 const Cript = new CRIPTO();
-Cript.value = "Mensagem Secreta";
-let key = Cript.encrypt();
-console.log(key);
-/* Output: 
-    [3696,9696,15840,22080,23280,29664,33936,41856,
-    13824,39840,53328,57024,71136,67872,83520,74496]
-*/
-Cript.keyInput.value = key;
-let mensagemDecifrada = Cript.decrypt();
-console.log(mensagemDecifrada);
-/* Output:
-    Mensagem Secreta
-*/
+
