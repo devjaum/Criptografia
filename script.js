@@ -29,12 +29,13 @@ class CRIPTO{
 
     }
     encrypt(){
-        this.value = document.getElementById("entry").value;
+        if(this.value == "") this.value = document.getElementById("entry").value;
         let value = this.matriz(this.value,false); 
         value = value.join("");
         this.keyHud.addEventListener("click",()=>this.copyKey(this.key));
         let _keyHud = "KEY: "+this.key;
         this.keyHud.innerText = _keyHud;
+        return this.key;
     }
     decrypt(){
         let _key = this.keyInput.value;
@@ -49,6 +50,7 @@ class CRIPTO{
         let value = this.matriz("0123456789012345",true); 
         value = value.join("");
         this.h2Encrypt.innerText = value;
+        return value;
     }
     shuffling(valueAscii, limit){
         const max = 126+48*2;
@@ -106,3 +108,16 @@ class CRIPTO{
     }
 }
 const Cript = new CRIPTO();
+Cript.value = "Mensagem Secreta";
+let key = Cript.encrypt();
+console.log(key);
+/* Output: 
+    [3696,9696,15840,22080,23280,29664,33936,41856,
+    13824,39840,53328,57024,71136,67872,83520,74496]
+*/
+Cript.keyInput.value = key;
+let mensagemDecifrada = Cript.decrypt();
+console.log(mensagemDecifrada);
+/* Output:
+    Mensagem Secreta
+*/
