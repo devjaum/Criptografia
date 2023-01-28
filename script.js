@@ -108,4 +108,3 @@ class CRIPTO{
     }
 }
 const Cript = new CRIPTO();
-
