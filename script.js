@@ -1,4 +1,4 @@
-class AES{
+class CRIPTO{
     constructor(){
         this.value = "";
         this.key = [];
@@ -105,4 +105,4 @@ class AES{
         });
     }
 }
-const Aes = new AES();
+const Cript = new CRIPTO();
