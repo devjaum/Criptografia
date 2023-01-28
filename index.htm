@@ -10,13 +10,21 @@
 <body>
     <header>
         <h1>Criptografia</h1>
+        <p id="keyHud"></p>
+        
     </header>
     <main>
+        <h2 id="encrypt"></h2>
         <div>
-            <label for="entry">Criptografar: </label>
-            <input id="entry" type="text">
+            <label for="entry" >Criptografar: </label>
+            <input id="entry" type="text" maxlength="16">
         </div>
         <button id="buttonEncrypt" >Criptografar</button>
+        <button id="buttonDecrypt" >Descriptografar</button>
+        <div id="divKeyInput">
+            <label for="keyInput">CHAVE: </label>
+            <input type="text" id="keyInput">
+        </div>
     </main>
 </body>
 <script src="./script.js"></script>

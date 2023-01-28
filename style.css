@@ -1,6 +1,10 @@
 *{
     background-color: #1b1b1b;
-    color: white
+    color: white;
+    -webkit-user-select:none;  
+    -moz-user-select:none;     
+    -ms-user-select:none;      
+    user-select:none;
 }
 body{
     display: flex;
@@ -24,4 +28,15 @@ button, input{
 button:hover, input:hover{
     background-color: white;
     color: black;
+}
+#divKeyInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
